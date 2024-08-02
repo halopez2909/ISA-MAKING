@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISA-MAKING - Pago</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fddde6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #fddde6;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid black;
+        }
+        header img {
+            width: 50px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 100px);
+        }
+        .payment-box {
+            background-color: white;
+            border: 1px solid black;
+            padding: 40px;
+            border-radius: 10px;
+            width: 400px;
+            text-align: center;
+            position: relative;
+        }
+        .payment-box h2 {
+            margin: 0 0 20px;
+            font-weight: normal;
+            font-size: 18px;
+            text-align: left;
+            border-bottom: 1px solid black;
+        }
+        .payment-box .total {
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 18px;
+            text-align: left;
+        }
+        .payment-box .thanks {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        .payment-box .continue-button {
+            background-color: #fddde6;
+            color: black;
+            border: 1px solid black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .payment-box .continue-button img {
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ISA-MAKING</h1>
+    </header>
+    <main>
+        <div class="payment-box">
+            <h2>pagos</h2>
+            <div class="total">TOTAL: $130.000</div>
+            <div class="thanks">GRACIAS POR SU COMPRA</div>
+            <a href="#" class="continue-button">
+                CONTINUAR
+            </a>
+        </div>
+    </main>
+</body>
+</html>
