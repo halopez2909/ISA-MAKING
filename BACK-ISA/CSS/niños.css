@@ -1,0 +1,93 @@
+header {
+    background-color: #5bbb58; /* Rosado */
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.tienda-nav{
+    display: flex;
+    justify-content: center;
+    background-color: #5bbb58; /* Rosado oscuro */
+    padding: 10px;
+}
+
+.tienda-nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.tienda-nav a:hover {
+    background-color: #ffffff;
+    color: #5bbb58;
+    border-radius: 4px;
+}
+
+/* Estilo de los productos */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #5bbb58;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.product h3 {
+    color: #5bbb58;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.product .price {
+    font-size: 18px;
+    color: #5bbb58;
+    margin-bottom: 10px;
+}
+
+.product button {
+    background-color: #5bbb58;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.product button:hover {
+    background-color: #5bbb58;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #5bbb58;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+.imagen {
+    border-radius: 50px;
+    height: 115px;
+}

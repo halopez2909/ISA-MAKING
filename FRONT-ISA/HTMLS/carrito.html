@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="../CSS/carrito.css">
+</head>
+<body>
+     <!-- Barra de navegación -->
+     <header>
+        ISA-MAKING   
+    </header>
+    <nav class="tienda-nav">
+        <a href="index.html">Inicio</a>
+        <a href="hombre.html">Hombre</a>
+        <a href="mujer.HTML">Mujer</a>
+        <a href="niños.html">Niños</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Contacto</a>
+    </nav>
+  
+    
+    <div class="product-list">
+        <div class="product">
+            <h2>Camisa</h2>
+            <p>Precio: $20</p>
+            <button class="boton" onclick="addToCart('Camisa', 20)">Añadir al carrito</button>
+        </div>
+        <div class="product">
+            <h2>Pantalones</h2>
+            <p>Precio: $30</p>
+            <button class="boton" onclick="addToCart('Pantalones', 30)">Añadir al carrito</button>
+        </div>
+    </div>
+    
+    <h2>Carrito de Compras</h2>
+    <ul id="cart">
+        <!-- Aquí se agregarán los productos -->
+    </ul>
+    <p id="total">Total: $0</p>
+
+    <script src="carrito.js"></script>
+</body>
+</html>
