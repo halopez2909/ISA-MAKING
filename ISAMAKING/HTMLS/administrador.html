@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Tienda de Ropa</title>
+    <link rel="stylesheet" href="../CSS/adm.css">
+</head>
+
+<body>
+
+    <h1>Panel de Administración - Tienda de Ropa</h1>
+    <h2>Gestión de Productos</h2>
+
+    <!-- Formulario para Crear Producto -->
+    <form id="createForm">
+        <h3>Agregar Nuevo Producto</h3>
+        <label for="nombre">Nombre del Producto:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="categoria">Categoría:</label>
+        <input type="text" id="categoria" name="categoria" required>
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" step="0.01" required>
+        <label for="cantidad">Cantidad Disponible:</label>
+        <input type="number" id="cantidad" name="cantidad" required>
+        <button type="submit">Agregar Producto</button>
+    </form>
+
+    <!-- Tabla para Leer Productos -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="productTable">
+            <tr>
+                <td>1</td>
+                <td>Camiseta Básica</td>
+                <td>Ropa Casual</td>
+                <td>$15.99</td>
+                <td>50</td>
+                <td>
+                    <button class="edit" onclick="editProduct(1)">Editar</button>
+                    <button class="delete" onclick="deleteProduct(1)">Eliminar</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Pantalón Jean</td>
+                <td>Ropa Casual</td>
+                <td>$35.99</td>
+                <td>30</td>
+                <td>
+                    <button class="edit" onclick="editProduct(2)">Editar</button>
+                    <button class="delete" onclick="deleteProduct(2)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Formulario para Actualizar Producto (oculto inicialmente) -->
+    <form id="editForm" style="display:none;">
+        <h3>Actualizar Producto</h3>
+        <input type="hidden" id="editId">
+        <label for="editNombre">Nombre del Producto:</label>
+        <input type="text" id="editNombre" name="editNombre" required>
+        <label for="editCategoria">Categoría:</label>
+        <input type="text" id="editCategoria" name="editCategoria" required>
+        <label for="editPrecio">Precio:</label>
+        <input type="number" id="editPrecio" name="editPrecio" step="0.01" required>
+        <label for="editCantidad">Cantidad Disponible:</label>
+        <input type="number" id="editCantidad" name="editCantidad" required>
+        <button type="submit">Actualizar Producto</button>
+        <button type="button" onclick="cancelEdit()">Cancelar</button>
+    </form>
+
+    <script>
+        // Función para crear un nuevo producto
+        document.getElementById('createForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const categoria = document.getElementById('categoria').value;
+            const precio = document.getElementById('precio').value;
+            const cantidad = document.getElementById('cantidad').value;
+            // Aquí iría el código para guardar el producto en la base de datos
+            alert('Producto creado: ' + nombre + ', ' + categoria + ', $' + precio + ', Cantidad: ' + cantidad);
+        });
+
+        // Función para editar un producto
+        function editProduct(id) {
+            // Mostrar formulario de edición
+            document.getElementById('editForm').style.display = 'block';
+            // Llenar el formulario con los datos actuales del producto
+            document.getElementById('editId').value = id;
+            document.getElementById('editNombre').value = 'Nombre de ejemplo ' + id;  // Obtener los datos reales del producto
+            document.getElementById('editCategoria').value = 'Categoría de ejemplo';
+            document.getElementById('editPrecio').value = '19.99';
+            document.getElementById('editCantidad').value = '20';
+        }
+
+        // Función para cancelar la edición
+        function cancelEdit() {
+            document.getElementById('editForm').style.display = 'none';
+        }
+
+        // Función para actualizar un producto
+        document.getElementById('editForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const id = document.getElementById('editId').value;
+            const nombre = document.getElementById('editNombre').value;
+            const categoria = document.getElementById('editCategoria').value;
+            const precio = document.getElementById('editPrecio').value;
+            const cantidad = document.getElementById('editCantidad').value;
+            // Aquí iría el código para actualizar el producto en la base de datos
+            alert('Producto actualizado: ' + nombre + ', ' + categoria + ', $' + precio + ', Cantidad: ' + cantidad);
+        });
+
+        // Función para eliminar un producto
+        function deleteProduct(id) {
+            // Aquí iría el código para eliminar el producto de la base de datos
+            alert('Producto eliminado con ID: ' + id);
+        }
+    </script>
+
+</body>
+
+</html>

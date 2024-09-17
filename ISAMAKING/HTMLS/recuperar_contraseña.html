@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/recuperar_contraseña.css">
+</head>
+<body>
+    <div>
+        <h2>Recuperar Contraseña</h2>
+        <form action="../php/recuperar_contraseña.php" method="POST">
+            <label class="recuperar" for="emali">Introduce tu correo electrónico</label>
+            <input type="email" id="emali" name="email" placeholder="Escribe tu email" required >
+            <label class="recuperar" for="password">Introduce tu nueva contraseña</label>
+            <input type="password" id="password" name="password" placeholder="Escribe tu contraseña" required >
+            <label class="recuperar" for="password">Confirmar contraseña</label>
+            <input type="password" id="password" name="password" placeholder="Escribe tu contraseña" required >
+            <input type="submit" value="Recuperar">
+        </form>
+        <p class="message">Te enviaremos un enlace para restablecer tu contraseña.</p>
+    </div>
+    
+
+
+
+
+</body>
+</html>
